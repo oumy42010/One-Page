@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Efalia  - Admin Dashboard Template build with Twitter Bootstrap 4
+Author: Seheno R
+Website: http://www.efalia.com/
+Contact: snirina@efalia.com
+-->
+<html lang="fr" >
+<!-- begin::Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Efalia | Landing Page MultiGest
+    </title>
+    <meta name="description" content="statistic charts">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--begin::Web font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Web font -->
+    <!--begin::Base Styles -->
+    <link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/demo/base/style.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/demo/base/timeline.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/demo/base/table.css" rel="stylesheet" type="text/css"/>
+    <!--end::Base Styles -->
+    <link rel="shortcut icon" href="assets/demo/media/img/logo/favicon.ico"/>
+</head>
+<!-- end::Head -->
+<!-- end::Body -->
+<body class="m-page--wide m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default"  >
+<!-- begin:: Page -->
+
+<div class="m-grid m-grid--hor m-grid--root m-page">
+    <!-- begin::Header -->
+    <header class="m-grid__item	m-header " >
+        <!--<header class="m-grid__item		m-header "  data-minimize="minimize" data-minimize-offset="200" data-minimize-mobile-offset="200" > !-->
+        <div class="m-header__top">
+            <div class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+                <div class="m-stack m-stack--ver m-stack--desktop">
+                    <!-- begin::Brand -->
+                    <div class="m-stack__item m-brand">
+                        <div class="m-stack m-stack--ver m-stack--general m-stack--inline">
+                            <div class="m-stack__item m-stack__item--middle m-brand__logo">
+                                <a href="index.html" class="m-brand__logo-wrapper">
+                                    <img alt="" src="assets/demo/media/img/logo/logo.png"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end::Brand -->
+                    <!-- begin::Topbar -->
+                    <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+                        <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+                            <div class="m-stack__item m-topbar__nav-wrapper">
+                                <input type="hidden" id="timer_target" value="1551394800000">
+                                <ul class="time_text">
+                                    <li>Jour</li>
+                                    <li>Heure</li>
+                                    <li>Minute</li>
+                                    <li>Seconde</li>
+                                </ul>
+                                <div class="time-position">
+                                    <span id="timer_day" class="time">JOUR</span>
+                                    <span class="time">&nbsp;:&nbsp;</span>
+                                    <span id="timer_hour" class="time">HEURE</span>
+                                    <span class="time">&nbsp;:&nbsp;</span>
+                                    <span id="timer_minute" class="time">MINUTE</span>
+                                    <span class="time">&nbsp;:&nbsp;</span>
+                                    <span id="timer_second" class="time">SECONDE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end::Topbar -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end::Header -->
+    <!-- begin::Body -->
+    <div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop 	m-container m-container--responsive m-container--xxl m-page__container m-body">
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+            <!-- BEGIN: Subheader -->
+            <div class="m-subheader ">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <!--<h3 class="m-subheader__title ">-->
+                            <!--Tableau de bord-->
+                        <!--</h3>-->
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Subheader -->
+            <div class="m-content">
+                <div class ="row">
+                    <div class="col-xl-12">
+                        <div class="m-portlet  m-portlet--full-height">
+                            <div class="m-portlet-body">
+                                <!-- timeline debut -->
+                                <ul class="timeline" id="timeline"></ul>
+                                <!-- timeline fin -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Begin::Section-->
+                <div class="row">
+                    <div class="col-xl-4">
+                        <!--begin:: Taches en cours -->
+                        <div class="m-portlet  m-portlet--full-height ">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            Tâches en cours
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-portlet__body">
+                                <div class="m-widget16">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="m-widget14">
+                                                <div class="row  align-items-center">
+                                                    <div class="col">
+                                                        <div class="m-widget24 m-widget25--progress" >
+                                                            <div class="m-widget24__item ">
+                                                                <span class="m-widget24__stats m--font-brand" id="current_sprint_issues"></span>
+                                                            </div>
+                                                        </div>
+                                                        <table id="table-responsive" class="table table-responsive">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">N°</th>
+                                                                    <!--<th scope="col">Titre</th>-->
+                                                                    <th scope="col">Type</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="current_issues"></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end:: Tâches en cours -->
+                    </div>
+                    <div class="col-xl-4">
+                        <!--begin:: Indicateur Budget -->
+                        <div class="m-portlet  m-portlet--full-height ">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            Budget
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-portlet__body">
+                                <div class="m-widget25">
+													<span class="m-widget25__price m--font-brand" id="dbt">
+													</span>
+                                    <b class="m-widget25__desc">
+                                        utilisés
+                                    </b>
+                                    <div class="m-widget25--progress">
+                                        <div class="m-widget25__progress">
+															<span class="m-widget25__progress-number">
+																40%
+															</span>
+                                            <div class="m--space-10"></div>
+                                            <div class="progress m-progress--sm">
+                                                <div class="progress-bar m--bg-danger" role="progressbar" style="width: 63%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="m-widget25__progress-sub">
+																Développement
+															</span>
+                                        </div>
+                                        <div class="m-widget25__progress">
+															<span class="m-widget25__progress-number">
+																26%
+															</span>
+                                            <div class="m--space-10"></div>
+                                            <div class="progress m-progress--sm">
+                                                <div class="progress-bar m--bg-accent" role="progressbar" style="width: 39%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="m-widget25__progress-sub">
+																Design
+															</span>
+                                        </div>
+                                        <div class="m-widget25__progress" >
+															<span class="m-widget25__progress-number">
+																33%
+															</span>
+                                            <div class="m--space-10"></div>
+                                            <div class="progress m-progress--sm">
+                                                <div class="progress-bar m--bg-warning" role="progressbar" style="width: 54%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="m-widget25__progress-sub">
+																Marketing
+															</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end:: Indicateur Budget -->
+                    </div>
+                    <div class="col-xl-4">
+                        <!--begin:: Widgets/ Avancement -->
+                        <div class="m-portlet  m-portlet--full-height ">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            Avancement
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--begin::Developpement-->
+                            <div class="m-portlet__body">
+                                <div class="m-widget24 m-widget25--progress" >
+                                    <div class="m-widget24__item ">
+                                        <h4 class="m-widget24__title">
+                                            Stories
+                                        </h4>
+                                        <br>
+                                        <span class="m-widget24__stats m--font-brand" id="nb_story_sprint"></span>
+                                        <div class="m--space-10"></div>
+                                        <div class="progress m-progress--sm">
+                                            <div id="progressbar_sprint" class="progress-bar m--bg-brand" role="progressbar" style="width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="m-widget24__number" id="nb_sprint_percent"></span>
+                                    </div>
+                                </div>
+                                <!--end::Developpement-->
+                                <!--begin::Designer-->
+                                <!--<div class="m-widget24">-->
+                                <!--<div class="m-widget24__item">-->
+                                <!--<h4 class="m-widget24__title">-->
+                                <!--Designer-->
+                                <!--</h4>-->
+                                <!--<br>-->
+                                <!--<span class="m-widget24__stats m&#45;&#45;font-info">-->
+                                <!--1349-->
+                                <!--</span>-->
+                                <!--<div class="m&#45;&#45;space-10"></div>-->
+                                <!--<div class="progress m-progress&#45;&#45;sm">-->
+                                <!--<div class="progress-bar m&#45;&#45;bg-danger" role="progressbar" style="width: 54%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                <!--</div>-->
+                                <!--<span class="m-widget24__number">-->
+                                <!--54%-->
+                                <!--</span>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--end::New Designer-->
+                            </div>
+                        </div>
+                        <!--end:: Widgets/Avancement -->
+                    </div>
+                </div>
+                <!--End::Section-->
+                <!--Begin::Section-->
+                <div class="row">
+                    <!--<div class="col-xl-6">-->
+                        <!--&lt;!&ndash;begin:: Widgets/Support Cases&ndash;&gt;-->
+                        <!--<div class="m-portlet  m-portlet&#45;&#45;full-height ">-->
+                            <!--<div class="m-portlet__head">-->
+                                <!--<div class="m-portlet__head-caption">-->
+                                    <!--<div class="m-portlet__head-title">-->
+                                        <!--<h3 class="m-portlet__head-text">-->
+                                            <!--User Stories-->
+                                        <!--</h3>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="m-portlet__body">-->
+                                <!--<div class="m-widget16">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-12">-->
+                                            <!--<div class="m-widget16__stats">-->
+                                                <!--<div class="m-widget16__visual">-->
+                                                    <!--<div id="m_chart_support_tickets" style="height: 220px"></div>-->
+                                                <!--</div>-->
+                                                <!--<div class="m-widget16__legends">-->
+                                                    <!--<div class="m-widget16__legend">-->
+                                                        <!--<span class="m-widget16__legend-bullet m&#45;&#45;bg-info"></span>-->
+                                                        <!--<strong class="m-widget16__legend-text" id="nb_story_sprint"></strong>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="m-widget16__legend">-->
+                                                        <!--<span class="m-widget16__legend-bullet m&#45;&#45;bg-accent"></span>-->
+                                                        <!--<strong class="m-widget16__legend-text" id="nb_story_sprint_done"></strong>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="m-widget16__legend">-->
+                                                        <!--<span class="m-widget16__legend-bullet m&#45;&#45;bg-danger"></span>-->
+                                                        <!--<strong class="m-widget16__legend-text">-->
+                                                            <!--10% Dolor-->
+                                                        <!--</strong>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;end:: Widgets/User Stories &ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+                <!--End::Section-->
+            </div>
+        </div>
+        <!--
+    </div>
+    -->
+    </div>
+    <!-- end::Body -->
+    <!-- begin::Footer -->
+    <footer class="m-grid__item m-footer ">
+        <div class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+            <div class="m-footer__wrapper">
+                <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+                    <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								2018 &copy; Efalia - Multigest
+                                </a>
+							</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end::Footer -->
+</div>
+<!-- end:: Page -->
+
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+    <i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->
+<!--begin::Base Scripts -->
+<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<script src="assets/demo/base/scripts.bundle.js" type="text/javascript"></script>
+<script src="assets/demo/base/timer.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" src="assets/demo/base/timeline.js"></script>
+<script type="text/javascript" src="assets/app/js/functions.js"></script>
+<script type="text/javascript" src="assets/app/js/xhttp.js"></script>
+<!--end::Base Scripts -->
+<!--begin::Page Snippets -->
+<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
+<!--end::Page Snippets -->
+</body>
+<!-- end::Body -->
+</html>

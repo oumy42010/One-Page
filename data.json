@@ -1,0 +1,8 @@
+[
+  { "nom_etape" : "MVP", "date_fin_etape" : "11/15/2014", "etape_terminee" : 1},
+  { "nom_etape" : "Armoires", "date_fin_etape" : "21/03/2018", "etape_terminee" : 1},
+  { "nom_etape" : "B", "date_fin_etape" : "25/04/2018", "etape_terminee" : 1},
+  { "nom_etape" : "C", "date_fin_etape" : "30/05/2018", "etape_terminee" : 0},
+  { "nom_etape" : "D", "date_fin_etape" : "30/05/2018", "etape_terminee" : 0},
+  { "nom_etape" : "Documation", "date_fin_etape" : "20/03/2019", "etape_terminee" : 0}
+]
